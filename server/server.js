@@ -63,7 +63,7 @@ app.get('/api/health', (req, res) => {
     env: process.env.NODE_ENV || 'development',
     services: {
       deepgram: !!process.env.DEEPGRAM_API_KEY && process.env.DEEPGRAM_API_KEY !== 'your_deepgram_api_key_here',
-      gemini: !!process.env.GEMINI_API_KEY && process.env.GEMINI_API_KEY !== 'your_gemini_api_key_here',
+      groq: !!process.env.GROQ_API_KEY && process.env.GROQ_API_KEY !== 'your_groq_api_key_here',
       mongodb: true, // If we get here, DB is connected
     },
   });
@@ -86,17 +86,11 @@ const startServer = async () => {
 
     server.listen(PORT, () => {
       console.log(`
-╔══════════════════════════════════════════════╗
-║                                              ║
-║   🏥 VoiceCare Server Running                ║
-║                                              ║
-║   REST API:  http://localhost:${PORT}/api      ║
-║   WebSocket: ws://localhost:${PORT}            ║
-║   Health:    http://localhost:${PORT}/api/health║
-║                                              ║
-║   Environment: ${(process.env.NODE_ENV || 'development').padEnd(28)}║
-║                                              ║
-╚══════════════════════════════════════════════╝
+   🏥 VoiceCare Server Running                                                             ║
+   REST API:  http://localhost:${PORT}/api      
+   WebSocket: ws://localhost:${PORT}            
+   Health:    http://localhost:${PORT}/api/health                                             ║
+   Environment: ${(process.env.NODE_ENV || 'development').padEnd(28)}
       `);
     });
   } catch (error) {

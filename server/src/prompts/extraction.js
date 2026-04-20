@@ -1,4 +1,4 @@
-// Medical data extraction prompt for Gemini LLM
+// Medical data extraction prompt for LLM
 // This is the core prompt that converts messy multilingual transcripts
 // into clean structured JSON
 

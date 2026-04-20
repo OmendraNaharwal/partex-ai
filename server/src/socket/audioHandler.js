@@ -12,7 +12,7 @@ import { generateSessionId } from '../utils/idGenerator.js';
  * 2. Client sends audio chunks → audio:chunk event
  * 3. Deepgram processes audio → sends interim/final transcripts back
  * 4. Client stops recording → audio:stop event
- * 5. Full transcript sent to Gemini → structured data extracted
+ * 5. Full transcript sent to LLM → structured data extracted
  * 6. Data saved to MongoDB → result sent to client
  */
 
