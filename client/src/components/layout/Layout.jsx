@@ -13,6 +13,7 @@ const navClass = ({ isActive }) =>
 export default function Layout() {
   const { user, logout } = useAuth();
 
+  
   return (
     <div className="min-h-screen text-slate-900">
       <header className="sticky top-0 z-20 border-b border-slate-200/80 bg-white/80 backdrop-blur-xl">
